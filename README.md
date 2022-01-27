@@ -60,3 +60,6 @@ Settings:
 3.2. How to run on Emulator: After properly connected:	  
 							  1. Open Appium Desktop and click Start Server
 							  2. Open terminal at Login-Android-Emulator folder and type pytest -v test_login.py
+							
+							
+							
