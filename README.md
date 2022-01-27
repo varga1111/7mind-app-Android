@@ -62,4 +62,3 @@ Settings:
 							  2. Open terminal at Login-Android-Emulator folder and type pytest -v test_login.py
 							
 							
-							
