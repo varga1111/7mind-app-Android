@@ -65,3 +65,4 @@ Settings:
 							  Jenkins Test2
 							  Jenkins Test3
 							  Jenkins4
+							  Jenkins Test5
