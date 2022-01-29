@@ -66,3 +66,4 @@ Settings:
 							  Jenkins Test3
 							  Jenkins4
 							  Jenkins Test5
+							  Jenkins Test6
