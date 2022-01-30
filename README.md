@@ -70,3 +70,4 @@ Settings:
 							  Jenkins Test7
 							  Jenkins Test8
 							  Jenkins Test9	
+							  Jenkins Test10
