@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/openmindschooling/MyStuff/GitHub/Mobile Test/7mind-app-Android/Login - Android-Real Device/env"
+VIRTUAL_ENV="/Users/openmindschooling/MyStuff/GitHub/MobileTest/7mind-app-Android/Login-Android-RealDevice/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
