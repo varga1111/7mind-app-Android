@@ -1,1 +1,0 @@
-[Deprecated] Please use 'find_element' with 'AppiumBy.ACCESSIBILITY_ID' instead.
