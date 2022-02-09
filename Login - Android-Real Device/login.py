@@ -1,39 +1,45 @@
-from launchapp import Launch
+from appium.webdriver.common.appiumby import AppiumBy as By
 
-class Login(Launch):
+from basemethods import Base_methods
+
+from today import Today
+
+
+class Login(Base_methods):
+
+    ''' By Locators'''
+    continue_button = (By.ID, 'de.sevenmind.android:id/actionButton')
+    login_button = (By.ID, 'de.sevenmind.android:id/actionButton')
+    email_button = (By.ID, 'de.sevenmind.android:id/actionButton')
+    email_input = (By.ID, 'de.sevenmind.android:id/cellDialogTextInputEditText')
+    password_input = (By.ID, 'de.sevenmind.android:id/cellDialogTextInputEditText')
+
 
     def __init__(self, driver):
-
-        self.driver = driver
+    
+        super().__init__(driver)
 
 
     def navigation_continue_btn(self):
-        self.driver.implicitly_wait(5)
-        continue_button = self.driver.find_element_by_id('de.sevenmind.android:id/actionButton')
-        continue_button.click()
-        
-        
+       self.do_click(self.continue_button)
+
+
     def navigation_login_btn(self):
-        self.driver.implicitly_wait(5)
-        login_button = self.driver.find_element_by_id('de.sevenmind.android:id/actionButton')
-        login_button.click()
+        self.do_click(self.continue_button)
 
 
     def navigation_email_btn(self):
-        self.driver.implicitly_wait(5)
-        email_button = self.driver.find_element_by_id('de.sevenmind.android:id/actionButton')
-        email_button.click()
-        
+        self.do_click(self.continue_button)
+
 
     def do_login_email(self, email):
-        self.driver.implicitly_wait(5)
-        email_input = self.driver.find_element_by_id('de.sevenmind.android:id/cellDialogTextInputEditText')
-        email_input.send_keys(email)
+        self.do_send_keys(self.email_input, email)
         self.driver.press_keycode(66)
 
 
     def do_login_password(self, password):
-        self.driver.implicitly_wait(5)
-        password_input = self.driver.find_element_by_id('de.sevenmind.android:id/cellDialogTextInputEditText')
-        password_input.send_keys(password)
+        self.do_send_keys(self.password_input, password)
         self.driver.press_keycode(66)
+        self.driver.implicitly_wait(3)
+        
+        return Today(self.driver)

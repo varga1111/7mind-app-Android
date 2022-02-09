@@ -1,7 +1,8 @@
 from launchapp import Launch
 from testdata import Testdata
 from login import Login
-
+from today import Today
+import time
 
 class Test_login(Launch):
     
@@ -29,3 +30,8 @@ class Test_login(Launch):
         driver = Login(self.driver)
         
         driver.do_login_password(Testdata.password)
+
+    def test_login_succesful(self):
+        driver = Today(self.driver)
+        driver.my_journey_visible()
+        
